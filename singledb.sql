@@ -72,7 +72,7 @@ WITH y AS (
   FROM pg_catalog.pg_class c
     INNER JOIN y ON y.oid = c.oid
     LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
-  WHERE c.relkind IN ('r', 'v', 'm', 'S', 'f')
+  WHERE c.relkind IN ('r', 'v', 'm', 'S', 'f', 'i', 'I', 'p')
     AND pg_catalog.pg_table_is_visible(c.oid)
 
 UNION ALL
